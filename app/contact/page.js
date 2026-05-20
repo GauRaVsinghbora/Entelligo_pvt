@@ -61,7 +61,6 @@ export default function Contact() {
           <div>
             {submitted ? (
               <div className="flex flex-col items-center justify-center text-center border border-gray-100 rounded-3xl p-16">
-                {/* <div className="text-5xl mb-6">✅</div> */}
                 <h3 className="text-2xl font-bold mb-3">Message Sent!</h3>
                 <p className="text-gray-500 text-sm">Thanks for reaching out. We'll get back to you within 24 hours.</p>
               </div>

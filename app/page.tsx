@@ -9,17 +9,17 @@ export default function Home() {
         <span className="text-xs font-semibold tracking-[0.2em] uppercase text-gray-400 mb-6 block">
           Built For Ambitious Teams
         </span>
-        <h1 className="text-6xl md:text-8xl font-extrabold leading-none tracking-tight mb-8 text-black">
+        <h1 className="text-6xl md:text-8xl text-center font-extrabold leading-none tracking-tight mb-8 text-black">
           Financial-grade<br />
           software<br />
           <span className="text-gray-300">engineering.</span>
         </h1>
-        <p className="text-gray-500 text-xl max-w-xl leading-relaxed mb-10">
+        <p className="text-gray-500 text-xl  leading-relaxed mb-10 text-center mx-auto">
           Entelligo helps teams launch secure products, automate complex workflows, and scale confidently across web, cloud, and AI.
         </p>
-        <div className="flex gap-4 flex-wrap">
+        <div className="flex gap-4 flex-wrap justify-center">
           <Link href="/contact"
-            className="bg-black text-white px-8 py-4 rounded-full font-medium hover:bg-gray-800 transition text-sm">
+            className="bg-black text-white px-8 py-4 rounded-full font-medium hover:bg-gray-800 transition text-sm text-center">
             Schedule a Strategy Call →
           </Link>
           <Link href="/about"
@@ -27,7 +27,9 @@ export default function Home() {
             Learn About Us
           </Link>
         </div>
-        <p className="mt-10 text-sm text-gray-400">160+ founders and operators trust Entelligo</p>
+        <p className="mt-10 text-sm text-gray-400 text-center">
+          160+ founders and operators trust Entelligo
+        </p>
 
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-24 pt-12 border-t border-gray-100">
@@ -38,8 +40,8 @@ export default function Home() {
             { value: '25+', label: 'Certified developers' },
           ].map((s) => (
             <div key={s.label}>
-              <div className="text-3xl font-bold text-black mb-1">{s.value}</div>
-              <div className="text-gray-400 text-sm">{s.label}</div>
+              <div className="text-3xl font-bold text-black mb-1 text-center">{s.value}</div>
+              <div className="text-gray-400 text-sm text-center">{s.label}</div>
             </div>
           ))}
         </div>
@@ -56,19 +58,50 @@ export default function Home() {
               { num: '02', tag: 'Web Development', title: 'Custom web platforms built for scale', desc: 'Secure and responsive apps in Next.js and cloud-native stacks optimized for growth and maintainability.', pills: ['SEO Optimized', 'Mobile-first', 'CMS Integration'] },
               { num: '03', tag: 'Mobile Apps', title: 'High-performance apps for iOS & Android', desc: 'Cross-platform mobile products with native-grade interactions and smooth release pipelines.', pills: ['Cross-platform', 'Native Performance', 'App Store Ready'] },
             ].map((s) => (
-              <div key={s.num} className="p-10 bg-white hover:bg-gray-50 transition group">
-                <div className="flex justify-between mb-8">
-                  <span className="text-4xl font-bold text-gray-100 group-hover:text-gray-200 transition">{s.num}</span>
-                  <span className="text-xs tracking-widest uppercase text-gray-400">{s.tag}</span>
-                </div>
-                <h3 className="text-lg font-bold mb-3 leading-snug">{s.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed mb-6">{s.desc}</p>
-                <div className="flex flex-wrap gap-2">
-                  {s.pills.map((p) => (
-                    <span key={p} className="border border-gray-200 text-gray-500 text-xs px-3 py-1 rounded-full">{p}</span>
-                  ))}
-                </div>
-              </div>
+<div
+  key={s.num}
+  className="relative overflow-hidden p-10 bg-white group cursor-pointer"
+>
+  {/* Sliding black layer */}
+  <div className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out"></div>
+
+  {/* Content */}
+  <div className="relative z-10">
+
+    <div className="flex justify-between mb-8">
+      <span className="text-4xl font-bold text-gray-100 group-hover:text-gray-600 transition duration-500">
+        {s.num}
+      </span>
+
+      <span className="text-xs tracking-widest uppercase text-gray-400 group-hover:text-gray-300 transition duration-500">
+        {s.tag}
+      </span>
+    </div>
+
+    <h3 className="text-lg font-bold mb-3 leading-snug text-black group-hover:text-white transition duration-500">
+      {s.title}
+    </h3>
+
+    <p className="text-gray-500 text-sm leading-relaxed mb-6 group-hover:text-gray-300 transition duration-500">
+      {s.desc}
+    </p>
+
+    <div className="flex flex-wrap gap-2">
+      {s.pills.map((p) => (
+        <span
+          key={p}
+          className="border border-gray-200 text-gray-500 text-xs px-3 py-1 rounded-full
+          group-hover:border-gray-500
+          group-hover:text-white
+          transition duration-500"
+        >
+          {p}
+        </span>
+      ))}
+    </div>
+
+  </div>
+</div>
             ))}
           </div>
         </div>

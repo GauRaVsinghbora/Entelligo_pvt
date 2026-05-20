@@ -33,7 +33,7 @@ export default function Navbar() {
       className={`sticky top-0 z-50 transition-all duration-300
       ${
         scrolled
-          ? 'bg-white/80 backdrop-blur-[2px] shadow-sm'
+          ? 'bg-white backdrop-blur-[2px] shadow-sm'
           : 'bg-transparent'
       }`}
     >

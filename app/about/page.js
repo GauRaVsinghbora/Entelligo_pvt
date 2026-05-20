@@ -60,15 +60,15 @@ export default function About() {
           <h2 className="text-4xl font-bold mb-16">Our core values</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { icon: '🎯', title: 'Outcome-first Thinking', desc: 'Every line of code is written with the business goal in mind, not just technical completeness.' },
-              { icon: '🔒', title: 'Security by Default', desc: 'Financial-grade security practices baked into every project from architecture to deployment.' },
-              { icon: '📈', title: 'Built to Scale', desc: "We architect systems that grow with your business — no painful rewrites at 10x traffic." },
-              { icon: '🤝', title: 'Transparent Partnership', desc: "No black boxes. You always know what we're building, why, and what's next." },
-              { icon: '⚡', title: 'Speed with Quality', desc: 'Agile sprints and CI/CD pipelines mean faster delivery without sacrificing reliability.' },
-              { icon: '🌍', title: 'Global Reach', desc: 'Serving clients across India, North America, and Europe with a remote-first culture.' },
+              {  title: 'Outcome-first Thinking', desc: 'Every line of code is written with the business goal in mind, not just technical completeness.' },
+              { title: 'Security by Default', desc: 'Financial-grade security practices baked into every project from architecture to deployment.' },
+              {  title: 'Built to Scale', desc: "We architect systems that grow with your business — no painful rewrites at 10x traffic." },
+              {  title: 'Transparent Partnership', desc: "No black boxes. You always know what we're building, why, and what's next." },
+              { title: 'Speed with Quality', desc: 'Agile sprints and CI/CD pipelines mean faster delivery without sacrificing reliability.' },
+              {  title: 'Global Reach', desc: 'Serving clients across India, North America, and Europe with a remote-first culture.' },
             ].map((v) => (
               <div key={v.title} className="bg-white border border-gray-100 rounded-2xl p-8 hover:border-black transition group">
-                <div className="text-3xl mb-4">{v.icon}</div>
+                
                 <h3 className="font-bold mb-2 text-sm">{v.title}</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">{v.desc}</p>
               </div>
